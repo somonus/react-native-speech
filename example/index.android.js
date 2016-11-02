@@ -15,7 +15,7 @@ import Speech from 'react-native-speech';
 
 export default class app2 extends Component {
   render() {
-    Speech.speak('欢迎');
+    Speech.speak('欢迎欢迎');
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
