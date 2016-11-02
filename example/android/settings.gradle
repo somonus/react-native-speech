@@ -1,3 +1,5 @@
 rootProject.name = 'app2'
 
 include ':app'
+include ':react-native-speech'
+project(':react-native-speech').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-speech/android')
