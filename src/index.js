@@ -6,7 +6,7 @@ const Speech = {
     let options = {};
     if(context.constructor === String) {
       options.text = context;
-      options.language = 'zh';
+      options.language = 'zh-CH';
     } else {
       options = context;
     }
@@ -14,6 +14,9 @@ const Speech = {
       callback = function callback(argument) {}
     }
     SpeechModule.speak(options, callback);
+  },
+  stop() {
+    SpeechModule.stop();
   }
 }
 

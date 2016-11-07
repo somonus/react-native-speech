@@ -25,7 +25,7 @@ RCT_EXPORT_METHOD(speak:(NSDictionary *)args callback:(RCTResponseSenderBlock)ca
     
     // Set args to variables
     NSString *text = args[@"text"];
-    NSString *lang = args[@"lang"] ? args[@"lang"] : @"zh-CH";
+    NSString *lang = args[@"language"] ? args[@"language"] : @"zh-CH";
     NSNumber *rate = args[@"rate"];
     
     // Error if no text is passed
@@ -53,7 +53,7 @@ RCT_EXPORT_METHOD(speak:(NSDictionary *)args callback:(RCTResponseSenderBlock)ca
 }
 
 // Stops synthesizer
-RCT_EXPORT_METHOD(stopSpeaking)
+RCT_EXPORT_METHOD(stop)
 {
     if (self.synthesizer) {
         [self.synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];

@@ -13,10 +13,15 @@ react-native link
 
 ## Usage
 
-###用法
+### 可用方法
+
+* `speak(context, callback)`: 播放语音方法。。
+  - `context`(String or Object): context为要播放的内容，可以是一个字符串或者一个对象，当是一个字符串时，则默认以中文播放当前字符串。如果是一个对象，则根据对象的key进行播放。对象包含的key有：
+    - `text`: 需要播放的文本内容
+    - `language`: 需要以哪种语言播放
 
 ```js
-import Speech from 'react-native-speech';
+import Speech from 'native-speech';
 
 Speech.speak('测试语音', () => alert('callback'));
 

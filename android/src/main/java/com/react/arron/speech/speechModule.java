@@ -92,17 +92,11 @@ public class speechModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void stop(final Callback callback) {
+    public void stop() {
         new GuardedAsyncTask<Void, Void>(getReactApplicationContext()) {
             @Override
             protected void doInBackgroundGuarded(Void... params) {
-                try {
-                    tts.stop();
-                    callback.invoke(null, true);
-
-                } catch (Exception e) {
-                    callback.invoke(e.getMessage());
-                }
+                tts.stop();
             }
         }.execute();
     }

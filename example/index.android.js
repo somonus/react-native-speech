@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Speech from 'react-native-speech';
+import Speech from 'native-speech';
 
 export default class app2 extends Component {
   render() {
